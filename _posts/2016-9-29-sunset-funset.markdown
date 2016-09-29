@@ -8,4 +8,5 @@ Sunset Funset uses topographic data from the USGS to find sunset viewing locatio
 
 ![completion rate by state]({{ site.url }}/images/screenshot.png)
 
-See the full project [here](https://github.com/sajafleming/Sunset-Funset). Data for this project is from [the USGS](http://viewer.nationalmap.gov/basic/)
+Try your own search  [here](http://www.sunsetfunset.com/)
+See the code for the full project [here](https://github.com/sajafleming/Sunset-Funset). Data for this project is from [the USGS](http://viewer.nationalmap.gov/basic/)
