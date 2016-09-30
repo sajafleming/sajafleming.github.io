@@ -349,13 +349,15 @@
 					background: #e1b89b;
 				}
 
+			/*originally dribbles colors #da83ae and #df93b8*/
+
 			.icon.circle.fa-linkedin-square {
-				background: #da83ae;
+				background: #7490c3;
 				color: white;
 			}
 
 				.icon.circle.fa-linkedin-square:hover {
-					background: #df93b8;
+					background: #829bc9;
 				}
 
 		.icon.featured {
