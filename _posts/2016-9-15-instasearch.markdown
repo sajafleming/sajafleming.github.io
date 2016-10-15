@@ -8,6 +8,8 @@ Instasearch allows users to search for pictures by a hashtag and ranging between
 
 ![App Screenshot Coffee]({{ site.url }}/images/instasearch_screenshot.png){: .center-image }
 
+Try your own search  [here](https://insta-search-sarah.herokuapp.com/)!
+
 Backend challenges:
 
 Fault tolerance: If the Instagram API does not respond in time, the system will die. Since I have no control over the external API and it has a risk of timing out, I added a NUM_RETRIES variable which will continue to retry the API call as many times as specified. (see get_photos.py)
@@ -17,5 +19,7 @@ Minimize API hits: In order to minimize API calls, I first check to see if I hav
 Parallel processes: In order to have multiple searches happen at once, I need multiple threads. I added 3 threads to my Procfile by adding “-w 3”. Note: only 1 worker is available with the free tier of heroku, so my app is still only running with 1 thread. (see Procfile)
 
 End date in the future: If the end date is in the future or if there is no end date given, I simply reassign the date to the current date. If there is no start date, I assign start date to an arbitrary low date so that when I check to see if the photo tag is > start date it will always be true. (see server.py lines 61-70)
+
+See the code for the full project [here](https://github.com/sajafleming/insta_search)
 
 Full-stack: Python, Javascript, JQuery, Flask, SQLAlchemy, PostgreSQL, HTML, CSS, Heroku
