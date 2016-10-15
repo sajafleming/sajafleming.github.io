@@ -4,9 +4,9 @@ title:  "Instasearch"
 date:   2016-9-15 18:22:01
 categories: project
 ---
-Insta Search allows users to search for pictures by a hashtag and ranging between certain dates. Insta Search uses the Instagram API to query for results and shows the results to the user on the same page.
+Instasearch allows users to search for pictures by a hashtag and ranging between certain dates. Insta Search uses the Instagram API to query for results and shows the results to the user on the same page.
 
-![App Screenshot]({{ site.url }}/images/instasearch_screenshot.png){: .center-image }
+![App Screenshot Coffee]({{ site.url }}/images/instasearch_screenshot.png){: .center-image }
 
 Backend challenges:
 
