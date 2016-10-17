@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Instasearch"
+title:  "instasearch"
 date:   2016-9-15 18:22:01
 categories: project
 ---
