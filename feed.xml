@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sarah Fleming</title>
+    <description>This is a personal website to show some of my projects.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 10 Oct 2018 19:17:46 -0700</pubDate>
+    <lastBuildDate>Wed, 10 Oct 2018 19:17:46 -0700</lastBuildDate>
+    <generator>Jekyll v3.7.4</generator>
+    
+      <item>
+        <title>Sunset Funset</title>
+        <description>&lt;p&gt;Sunset Funset uses topographic data from the USGS to find sunset viewing locations. Optimal locations within a user specified area and search radius are determined by finding local maxima, filtering them according to potential sunset visibility, ranking them using a variety of scores, and returning the final points plotted on a Google Map with corresponding pictures from the Flickr API. The project stores data on and is deployed on AWS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/screenshot.png&quot; alt=&quot;App Screenshot&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Try your own search  &lt;a href=&quot;http://www.sunsetfunset.com/&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Technologies used: Python (osgeo, scipy, numpy), Javascript, Flask, SQLAlchemy, Google Maps API, Flickr API, AWS EC2 Instance, AWS S3 bucket, Bootstrap, HTML, CSS&lt;/p&gt;
+
+&lt;p&gt;See the code for the full project &lt;a href=&quot;https://github.com/sajafleming/Sunset-Funset&quot;&gt;here&lt;/a&gt;. Data for this project is from &lt;a href=&quot;http://viewer.nationalmap.gov/basic/&quot;&gt;the USGS&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 29 Sep 2016 11:22:01 -0700</pubDate>
+        <link>http://localhost:4000/project/2016/09/29/sunset-funset.html</link>
+        <guid isPermaLink="true">http://localhost:4000/project/2016/09/29/sunset-funset.html</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>instasearch</title>
+        <description>&lt;p&gt;Instasearch allows users to search for pictures by a hashtag and ranging between certain dates. Insta Search uses the Instagram API to query for results and shows the results to the user on the same page.&lt;/p&gt;
+
+&lt;!-- ![App Screenshot Coffee](http://localhost:4000/images/instasearch_screenshot.png){: .center-image } --&gt;
+&lt;p&gt;&lt;img src=&quot;/images/lattegg.gif&quot; alt=&quot;demo&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Try your own search  &lt;a href=&quot;https://insta-search-sarah.herokuapp.com/&quot;&gt;here&lt;/a&gt;!
+See the code for the full project &lt;a href=&quot;https://github.com/sajafleming/insta_search&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Backend challenges:&lt;/p&gt;
+
+&lt;p&gt;Fault tolerance: If the Instagram API does not respond in time, the system will die. Since I have no control over the external API and it has a risk of timing out, I added a NUM_RETRIES variable which will continue to retry the API call as many times as specified. (see get_photos.py)&lt;/p&gt;
+
+&lt;p&gt;Minimize API hits: In order to minimize API calls, I first check to see if I have the tag the user searched for stored in the database along with the end date of their date range. Note: the Instagram endpoint I am using only searches recent photos so there is no way I can go back in time and search for the start date which is why I only check for end date. If the tag and end date pair is not in my database, only then will I query the Instagram API. (see date_tag_exists function in server.py)&lt;/p&gt;
+
+&lt;p&gt;Parallel processes: In order to have multiple searches happen at once, I need multiple threads. I added 3 threads to my Procfile by adding “-w 3”. Note: only 1 worker is available with the free tier of heroku, so my app is still only running with 1 thread. (see Procfile)&lt;/p&gt;
+
+&lt;p&gt;End date in the future: If the end date is in the future or if there is no end date given, I simply reassign the date to the current date. If there is no start date, I assign start date to an arbitrary low date so that when I check to see if the photo tag is &amp;gt; start date it will always be true. (see server.py lines 61-70)&lt;/p&gt;
+
+&lt;p&gt;Full-stack: Python, Javascript, JQuery, Flask, SQLAlchemy, PostgreSQL, HTML, CSS, Heroku&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Sep 2016 11:22:01 -0700</pubDate>
+        <link>http://localhost:4000/project/2016/09/15/instasearch.html</link>
+        <guid isPermaLink="true">http://localhost:4000/project/2016/09/15/instasearch.html</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>College Data Analysis</title>
+        <description>&lt;p&gt;Analysis of how the public schools in different states performed based on college scorecared data from data.gov. Here is a heat map of the states by the percent of 
+students who completed a degree. The hotter the color the better!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/map.png&quot; alt=&quot;completion rate by state&quot; class=&quot;center-image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See the full analysis &lt;a href=&quot;https://github.com/sajafleming/CollegeScorecardAnalysis/blob/master/CollegeScorecardAnalysis.ipynb&quot;&gt;here&lt;/a&gt;. Data for this project is from &lt;a href=&quot;https://catalog.data.gov/dataset/college-scorecard&quot;&gt;this data.gov page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tech-stack: ipython notebooks, pandas, numpy&lt;/p&gt;
+
+&lt;p&gt;The next step is to see which state has the best return on investment.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 25 Oct 2015 11:22:01 -0700</pubDate>
+        <link>http://localhost:4000/project/2015/10/25/college-data-analysis.html</link>
+        <guid isPermaLink="true">http://localhost:4000/project/2015/10/25/college-data-analysis.html</guid>
+        
+        
+        <category>project</category>
+        
+      </item>
+    
+  </channel>
+</rss>
