@@ -1114,3 +1114,6 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+.hidden{ display: none; }
+

@@ -909,6 +909,7 @@
 
 	body.index #main {
 		padding-top: 5em;
+		display: none;
 	}
 
 /* CTA */
@@ -1114,3 +1115,6 @@
 			display: inline-block;
 			width: 5em;
 		}
+
+
+.hidden { display: none; }
