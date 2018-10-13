@@ -7,7 +7,7 @@ categories: project
 Instasearch allows users to search for pictures by a hashtag and ranging between certain dates. Insta Search uses the Instagram API to query for results and shows the results to the user on the same page.
 
 <!-- ![App Screenshot Coffee]({{ site.url }}/images/instasearch_screenshot.png){: .center-image } -->
-![demo](/images/lattegg.gif){: .center-image }
+![demo](/images/latteart.png){: .center-image }
 
 Try your own search  [here](https://insta-search-sarah.herokuapp.com/)!
 See the code for the full project [here](https://github.com/sajafleming/insta_search)
